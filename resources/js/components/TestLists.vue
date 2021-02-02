@@ -66,7 +66,8 @@ export default {
   color: #015bff;
   font-size: 35px;
   font-weight: bold;
-  font-family: 'Georgia', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: 1px;
 }
 .rightSlideBlock {
   display: inline-block;

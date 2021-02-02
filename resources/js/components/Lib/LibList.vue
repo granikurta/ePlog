@@ -32,11 +32,12 @@ hr{
     border-top: 1px solid #e5e5e5;
 }
 .title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
-    font-style: italic;
-    font-family: 'Georgia', sans-serif;
-    color:black;
+    /* font-style: italic; */
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    color: black;
     text-decoration: none;
 }
 .article-body {

@@ -5,7 +5,7 @@
       <h2 class="chapter-title">{{ chapter.title }}</h2>
    <div v-html="chapter.body" class="soub-chapte-body"></div>
       <div v-for="subChapter in chapter.sub_chapter" :key="subChapter.id">
-        <span class="sub-chapter-title">{{ subChapter.title }}</span>
+        <h3 class="sub-chapter-title"><span>{{ subChapter.title }}</span></h3>
             <div v-html="subChapter.body" class="soub-chapte-body"></div>
       </div>
     </div>
@@ -21,32 +21,45 @@ export default {
     };
   },
   mounted() {
-    console.log(this.article);
+    // console.log(this.article);
   },
   methods: {},
 };
 </script>
 <style scoped>
 .container-slide {
-  padding: 3% 14%;
+  padding: 3% 31%;
 }
 h1 {
+  letter-spacing: -0.02em;
   text-align: center;
-  font-family: "Georgia", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
 }
 .chapter-title {
-  font-family: "Georgia", sans-serif;
-  font-size: 24px;
+  font-family: "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+
+}
+h3 span {
+    background:#fff; 
+    padding:0 10px; 
 }
 .sub-chapter-title {
-  font-family: "Georgia", sans-serif;
-  font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    /* font-family: "Georgia", sans-serif; */
+    text-align: center;
+    border-bottom: 1px solid #555;
+    line-height: 0.1em;
+    margin: 35px 0 35px;
+    letter-spacing: 1px;
 }
 .soub-chapte-body{
-    text-align: justify;
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  line-height: 23px;
+    /* text-align: justify; */
+    font-size: 16px;
+    font-family: "Verdana ", sans-serif;
+    line-height: 25px;
 }
 p {
   text-align: justify;
