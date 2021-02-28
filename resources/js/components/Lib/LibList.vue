@@ -1,6 +1,7 @@
 <template>
   <div class="container-slide">
-    <div v-for="article in articles" :key="article.id">
+    <autocomplete :search="search"></autocomplete>
+    <div v-for="article in articles" :key="article.id" class="article">
       <a class="title" :href="'/lib/'+ article.id">{{ article.title }}</a>
       <p class="article-body" v-html="article.preview"></p>
       <p class="article-author">Author: {{ article.author }}</p>
@@ -26,24 +27,28 @@ export default {
 </script>
 <style scoped>
 .container-slide {
-    padding: 3% 14%;
+    padding: 3% 9%;
 }
 hr{
     border-top: 1px solid #e5e5e5;
 }
+.article{
+      padding-left: 60px;
+    padding-top: 30px;
+}
+
 .title {
-    font-size: 19px;
+    font-size: 24px;
     font-weight: 600;
     /* font-style: italic; */
-    font-family: 'Helvetica Neue', sans-serif;
-    letter-spacing: 1px;
-    color: black;
+    font-family: 'Lora', sans-serif;
+    color: #13022C;
     text-decoration: none;
 }
 .article-body {
-    font-size: 14px;
-    line-height: 23px;
-    font-family: 'Roboto', sans-serif
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Source Sans Pro', sans-serif
 }
 .article-author{
     font-style: italic;

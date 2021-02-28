@@ -1,31 +1,20 @@
 <template>
   <div class="container-slide">
     <autocomplete :search="search"></autocomplete>
-    <div class="slide" v-for="test in tests" :key="test.id">
-      <h2 ><a v-bind:href="'/test/'+ test.id" class="test-name">{{test.name}}</a></h2>
-      <div class="rightSlideBlock">
-        <span class="nameSlideBlock">Description:</span>
-        <p class="descrip">
-          {{test.description}}
+    <div class="containter-column">
+      <div class="slide" v-for="test in tests" :key="test.id">
+        <h2>
+          <a v-bind:href="'/test/' + test.id" class="test-name">{{
+            test.name
+          }}</a>
+        </h2>
+        <p class="source" v-if="test.source">
+          {{ test.source }}
         </p>
-      </div>
-      <div class="leftSlideBlock">
-        <div class="slideBlock">
-          <span class="nameSlideBlock">Source:</span>
-          <p class="descrip" v-if="test.source">
-            {{test.source}}
-          </p>
-          <p class="descrip" v-else>
-            Отсутствует
-          </p>
-        </div>
-        <div class="slideBlock" >
-          <span class="nameSlideBlock">Other:</span>
-          <p class="descrip" v-if="test.other">
-            {{test.other}}
-          </p>
-          <p class="descrip" v-else>
-            Отсутствует
+        <p class="source" v-else>Отсутствует</p>
+        <div class="rightSlideBlock">
+          <p class="descrip">
+            {{ test.description }}
           </p>
         </div>
       </div>
@@ -50,28 +39,46 @@ export default {
 </script>
 
 <style scoped>
-.container-slide{
-  padding: 3% 14%;
+.container-slide {
+  padding: 3% 9%;
+}
+.containter-column{
+  display: flex;
+}
+h2 {
+  margin-bottom: 2px;
+  font-size: 1.33333rem;
 }
 .slide {
-    border-radius: 10px;
-    margin-top: 10px;
-    padding: 30px;
-    background-color: white;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  /* margin-top: 10px; */
+  /* padding: 30px; */
+  padding-left: 60px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.source {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  /* font-family: montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif; */
 }
 .test-name {
   text-decoration: none;
-  color: #015bff;
-  font-size: 35px;
+  color: black;
+  font-size: 16px;
+  /* font-size: 1.33333rem;
   font-weight: bold;
-  font-family: 'Helvetica Neue', sans-serif;
-  letter-spacing: 1px;
+  font-style: italic; */
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
 }
 .rightSlideBlock {
   display: inline-block;
-  width: 45%;
+  width: 454px;
 }
 .nameSlideBlock {
   font-size: 18px;
@@ -79,7 +86,6 @@ export default {
 }
 .leftSlideBlock {
   margin-left: 5%;
-  width: 45%;
   display: inline-block;
 }
 .slideBlock {
@@ -100,7 +106,11 @@ export default {
   justify-content: center;
 }
 .descrip {
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 27px;
+  padding-left: 15px;
+  /* font-size: 1.125em; */
+  font-size: 14px;
+  font-weight: 400;
 }
 </style>

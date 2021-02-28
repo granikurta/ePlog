@@ -9,6 +9,10 @@
     <!-- Fonts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <style>
@@ -28,28 +32,27 @@
             float: right;
         }
         .topnav-right a{
-            font-family: 'Georgia', sans-serif;
-            color: rgba(0, 0, 0, 0.7);
+            font-family: 'Galada', sans-serif;
+            color: rgba(0, 0, 0, 1);
             float: left;
             text-align: center;
             padding: 30px 34px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 20px;
         }
         .logo{
-            font-family: 'Georgia', sans-serif;
+            font-family: 'Galada';
             float: left;
-            color: rgba(0, 0, 0, 0.7);
+            color: rgba(0, 0, 0, 1);
             text-align: center;
             padding: 30px 34px 30px 0;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 20px;
         }
 
         .topnav {
             overflow: hidden;
-            padding: 0 14%;
-
+            padding: 0 9%;
         }
 
         #app {
