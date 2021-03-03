@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/test/{id}/result', 'App\Http\Controllers\testController@result');
 Route::post('/test/refact', 'App\Http\Controllers\AdminMenuController@refact');
+Route::get('/hello', function(){
+	return 'hello from laravel';
+});
